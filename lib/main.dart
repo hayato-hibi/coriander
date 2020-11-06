@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'next_page.dart';
-
 void main() {
   runApp(MyApp());
 }
@@ -13,19 +11,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
-
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
-
-
 
   final String title;
 
@@ -34,19 +28,14 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final items = [
-    'Hayato 1', 'Hayato 2', 'Hayato 3'
-  ];
+  final items = ['Hayato 1', 'Hayato 2', 'Hayato 3'];
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
-
-        title: Text('テキスト入力'),
-        actions: <Widget>[
-        ],
+        title: Text('テキスト入力してください'),
+        actions: <Widget>[],
       ),
       body: Container(
         width: double.infinity,
@@ -56,12 +45,10 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Column(
               children: <Widget>[
-                Expanded(
-                  child: Image.asset('images/flutter.jpg')
-                  ),
-              Text('Hayato'),
-            ],
-          ),
+                Expanded(child: Image.asset('images/flutter.jpg')),
+                Text('Hayato'),
+              ],
+            ),
             Container(
               width: 160.0,
               color: Colors.blue,
@@ -80,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ],
         ),
-        ),
+      ),
       // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
